@@ -211,11 +211,11 @@ function getCharInfo() {
 
 function convertStandTextToValue(text) {
     switch (text) {
-        case "Attack Stand":
+        case "Attack":
             return 0;
-        case "Defense Stand":
+        case "Defense":
             return -0.3;
-        case "Defense Stand (Co-op Unison)":
+        case "Defense (Co-op Unison)":
             return -0.4;
         default:
             console.log("Code does not match html value.")
