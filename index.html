@@ -22,7 +22,7 @@
 		<h3>Character Info</h3>
 	</div>
 
-	<form class="w3-container w3-margin-top">
+	<div class="w3-container w3-margin-top">
 		<label>
 			HP
 			<input class="w3-input w3-margin-bottom" type="number" value="10000" id="charHp">
@@ -38,7 +38,7 @@
 		</label>
 		<div class="w3-dropdown-hover w3-block" style="width:100%">
 			MDEF Buff/Debuff
-			<button class="w3-button w3-white w3-block w3-left-align" id="charMdefBuff">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="charMdefBuff" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Buff: Low</a>
@@ -55,7 +55,7 @@
 		</div>
 		<div class="w3-dropdown-hover w3-block w3-margin-top" style="width:100%">
 			PDEF Buff/Debuff
-			<button class="w3-button w3-white w3-block w3-left-align" id="charPdefBuff">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="charPdefBuff" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Buff: Low</a>
@@ -72,7 +72,7 @@
 		</div>
 		<div class="w3-dropdown-hover w3-block w3-margin-top" style="width:100%">
 			Boost Elemental Resist R Ability
-			<button class="w3-button w3-white w3-block w3-left-align" id="charElemResistR">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="charElemResistR" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">5%</a>
@@ -86,7 +86,7 @@
 		</div>
 		<div class="w3-dropdown-hover w3-block w3-margin-top" style="width:100%">
 			Elemental Resist Buff/Debuff
-			<button class="w3-button w3-white w3-block w3-left-align" id="charElemResist">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="charElemResist" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Buff: Low</a>
@@ -103,14 +103,14 @@
 		</div>
 		<div class="w3-dropdown-hover w3-block w3-margin-top" style="width:100%">
 			Max Stance Gauge
-			<button class="w3-button w3-white w3-block w3-left-align" id="charStand">Defense</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="charStand" onmouseover="show(event)">Defense</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a href="#" class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Attack</a>
 				<a href="#" class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Defense</a>
 				<a href="#" class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Defense (Co-op Unison)</a>
 			</div>
 		</div>
-	</form>
+	</div>
 </div>
 
 <div class="w3-half w3-container w3-padding-32">
@@ -118,14 +118,14 @@
 		<h3>Enemy Info</h3>
 	</div>
 
-	<form class="w3-container w3-margin-top">
+	<div class="w3-container w3-margin-top">
 		<label>
 			PATK
 			<input class="w3-input w3-margin-bottom" type="number" value="10000" id="enemyPatk">
 		</label>
 		<div class="w3-dropdown-hover w3-block w3-margin-bottom" style="width:100%">
 			Permanent (Framed) PATK Buff
-			<button class="w3-button w3-white w3-block w3-left-align" id="enemyPermPatk">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="enemyPermPatk" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">10%</a>
@@ -136,7 +136,7 @@
 
 		<div class="w3-dropdown-hover w3-block w3-margin-bottom" style="width:100%">
 			PATK Buff/Debuff
-			<button class="w3-button w3-white w3-block w3-left-align" id="enemyPatkBuff">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="enemyPatkBuff" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Buff: Low</a>
@@ -158,7 +158,7 @@
 		</label>
 		<div class="w3-dropdown-hover w3-block w3-margin-bottom" style="width:100%">
 			Permanent (Framed) MATK Buff
-			<button class="w3-button w3-white w3-block w3-left-align" id="enemyPermMatk">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="enemyPermMatk" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">10%</a>
@@ -169,7 +169,7 @@
 
 		<div class="w3-dropdown-hover w3-block w3-margin-top" style="width:100%">
 			MATK Buff/Debuff
-			<button class="w3-button w3-white w3-block w3-left-align" id="enemyMatkBuff">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="enemyMatkBuff" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Buff: Low</a>
@@ -186,7 +186,7 @@
 		</div>
 		<div class="w3-dropdown-hover w3-block w3-margin-top w3-margin-bottom" style="width:100%">
 			Elemental Buff/Debuff
-			<button class="w3-button w3-white w3-block w3-left-align" id="enemyElemBuff">None</button>
+			<button class="w3-button w3-white w3-block w3-left-align" id="enemyElemBuff" onmouseover="show(event)">None</button>
 			<div class="w3-dropdown-content w3-bar-block w3-border">
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">None</a>
 				<a class="w3-bar-item w3-button" onclick="replaceHeaderWithOptionName(event)">Buff: Low</a>
@@ -221,7 +221,7 @@
 			Magical Elemental Skill %
 			<input class="w3-input w3-margin-bottom" type="number" value="1000" id="enemyElemMSkill">
 		</label>
-	</form>
+	</div>
 </div>
 
 <div class="w3-center w3-margin-top w3-padding-64">

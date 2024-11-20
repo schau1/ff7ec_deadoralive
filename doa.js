@@ -26,7 +26,7 @@ function runDoACalc() {
 
     outputStr = "Physical Non-Elemental: "
     if (minP > hp) {
-        outputStr += "You will always be dead!"
+        outputStr += "You will be dead!"
     }
     else if (minP < hp && hp < maxP) {
         outputStr += "Sometimes you're dead. Your fate is up to RNG God!"
@@ -38,7 +38,7 @@ function runDoACalc() {
 
     outputStr = "Physical Elemental: "
     if (minPE > hp) {
-        outputStr += "You will always be dead!"
+        outputStr += "You will be dead!"
     }
     else if (minPE < hp && hp < maxPE) {
         outputStr += "Sometimes you're dead. Your fate is up to RNG God!"
@@ -50,7 +50,7 @@ function runDoACalc() {
 
     outputStr = "Magical Non-Elemental: "
     if (minM > hp) {
-        outputStr += "You will always be dead!"
+        outputStr += "You will be dead!"
     }
     else if (minM < hp && hp < maxM) {
         outputStr += "Sometimes you're dead. Your fate is up to RNG God!"
@@ -62,7 +62,7 @@ function runDoACalc() {
 
     outputStr = "Magical Elemental: "
     if (minME > hp) {
-        outputStr += "You will always be dead!"
+        outputStr += "You will be dead!"
     }
     else if (minM < hp && hp < maxME) {
         outputStr += "Sometimes you're dead. Your fate is up to RNG God!"
@@ -97,8 +97,22 @@ function replaceHeaderWithOptionName(event) {
 
     var divSibling = targetElement.parentNode.parentNode.firstElementChild;
 
-    divSibling.innerHTML = targetElement.innerHTML
+    divSibling.innerHTML = targetElement.innerHTML;
+
+    var x = targetElement.parentNode;
+
+    if (x.className.indexOf("w3-hide") == -1) {
+        x.className += " w3-hide";
+    }
 }
+
+function show(event) {
+    const targetElement = event.target;
+    var x = targetElement.parentNode.firstElementChild.nextElementSibling;
+
+    x.className = x.className.replace(" w3-hide", "");
+}
+
 function getEnemyInfo() {
     var patk = parseInt(document.getElementById('enemyPatk').value);
     var patkPer = convertPercentTextToValue(document.getElementById('enemyPermPatk').innerHTML);
